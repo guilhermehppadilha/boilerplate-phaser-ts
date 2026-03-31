@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useLayoutEffect, useRef } from 'react';
+import { forwardRef, useEffect, useLayoutEffect, useRef } from 'react';
 import Phaser from 'phaser';
 import { getGameConfig } from "@/game/config/GameConfig";
 import { EventBus, GameEvents } from '@/game/events/EventBus';

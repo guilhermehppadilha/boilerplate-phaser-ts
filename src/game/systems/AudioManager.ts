@@ -1,6 +1,6 @@
 import { Scene } from 'phaser';
-import { useGameStore } from '../../store/useGameStore';
-import { AudioAssets } from '../../config/AssetManifest';
+import { useGameStore } from '@/store/useGameStore';
+import { AudioAssets } from '@/game/config/AssetManifest';
 
 export class AudioManager {
     private static instance: AudioManager;

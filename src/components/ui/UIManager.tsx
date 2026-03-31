@@ -10,12 +10,6 @@ export const UIManager: React.FC = () => {
     const currentScreen = useUIStore((state) => state.currentScreen);
     const setScreen = useUIStore((state) => state.setScreen);
 
-    const handleStartGame = () => {
-        setScreen('PLAYING');
-        EventBus.emit(GameEvents.START_GAME); 
-        PokiService.gameplayStart();
-    };
-
     const handlePause = () => {
         setScreen('PAUSED');
         EventBus.emit(GameEvents.PAUSE_GAME);
