@@ -1,5 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const phasermsg = () => {
     return {
@@ -11,7 +17,6 @@ const phasermsg = () => {
             const line = "---------------------------------------------------------";
             const msg = `❤️❤️❤️ Tell us about your game! - games@phaser.io ❤️❤️❤️`;
             process.stdout.write(`${line}\n${msg}\n${line}\n`);
-
             process.stdout.write(`✨ Done ✨\n`);
         }
     }
@@ -21,8 +26,14 @@ export default defineConfig({
     base: './',
     plugins: [
         react(),
+        tailwindcss(),
         phasermsg()
     ],
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, '../src') 
+        }
+    },
     logLevel: 'warning',
     build: {
         rollupOptions: {
@@ -35,7 +46,8 @@ export default defineConfig({
         minify: 'terser',
         terserOptions: {
             compress: {
-                passes: 2
+                passes: 2,
+                drop_console: true
             },
             mangle: true,
             format: {

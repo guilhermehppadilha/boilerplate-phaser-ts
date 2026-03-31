@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --spacing-safe-top: env(safe-area-inset-top);
+  --spacing-safe-bottom: env(safe-area-inset-bottom);
+  --spacing-safe-left: env(safe-area-inset-left);
+  --spacing-safe-right: env(safe-area-inset-right);
+}
+
+@layer base {
+  body {
+    overscroll-behavior-y: none;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #000;
+  }
+}
