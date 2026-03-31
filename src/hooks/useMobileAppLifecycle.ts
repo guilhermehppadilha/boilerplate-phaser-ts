@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { App } from '@capacitor/app';
 import { Capacitor } from '@capacitor/core';
 import { useUIStore } from '../store/useUIStore';
-import { EventBus, GameEvents } from '../game/events/EventBus';
+import { EventBus, GameEvents } from '@/game/events/EventBus';
 
 export function useMobileAppLifecycle() {
     const setScreen = useUIStore((state) => state.setScreen);
