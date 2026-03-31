@@ -1,5 +1,5 @@
 import { Scene } from 'phaser';
-import { AssetManifest, ImageAssets } from '../../config/AssetManifest';
+import { AssetManifest, ImageAssets } from '@/game/config/AssetManifest';
 
 export class Preloader extends Scene {
     constructor() {
