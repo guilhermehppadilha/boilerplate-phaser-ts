@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useLayoutEffect, useRef } from 'react';
 import Phaser from 'phaser';
-import { getGameConfig } from '../config/GameConfig';
-import { EventBus, GameEvents } from '../game/events/EventBus';
+import { getGameConfig } from "@/game/config/GameConfig";
+import { EventBus, GameEvents } from '@/game/events/EventBus';
 
 export interface IPhaserGameRef {
     game: Phaser.Game | null;
